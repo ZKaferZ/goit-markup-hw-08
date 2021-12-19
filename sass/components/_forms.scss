@@ -1,64 +1,47 @@
-.modal__backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  height: 100%;
+.js-speaker-form {
+  @media screen and (min-width: 768px) {
+    margin: 0 auto;
+    max-width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    max-width: 600px;
+
+    &__label {
+      margin-right: 8px;
+      text-align: left;
+    }
+  }
+}
+
+.js-speaker-form__input {
   width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
 
-  background-color: $backdrop-overlay-color;
-
-  visibility: visible;
-  transition: visibility $duration $function;
-
-  &--is-hidden {
-    visibility: hidden;
-    pointer-events: none;
-  }
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-
-  transform: translate(-50%, -50%) scale(1);
-
-  min-width: 528px;
-  min-height: 581px;
-  padding: 40px;
-
-  background: $current-light-color;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-
-  opacity: 1;
-
-  transition-property: opacity, transform;
-  transition-duration: $duration;
-  transition-timing-function: $function;
-
-  .modal__backdrop--is-hidden > & {
-    opacity: 0;
-
-    transform: translate(-50%, -50%) scale(0.5);
-  }
-}
-
-.modal__heading {
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
+  line-height: 20px;
   letter-spacing: 0.03em;
 
-  color: $current-title-color;
+  color: $footer-link-color;
+
+  background-color: $minor-background-color;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    width: 358px;
+  }
 }
 
-.modal__label {
+.form__label {
   position: relative;
   display: block;
   text-align: left;
@@ -79,7 +62,7 @@
   }
 }
 
-.modal__text {
+.form__text {
   display: block;
   margin-bottom: 4px;
   font-size: 12px;
@@ -89,7 +72,7 @@
   color: $current-text-color;
 }
 
-.modal__input {
+.form__input {
   display: block;
   width: 100%;
   height: 40px;
@@ -107,7 +90,7 @@
   }
 }
 
-.modal__textarea {
+.form__textarea {
   display: block;
 
   width: 100%;
@@ -136,14 +119,10 @@
   }
 }
 
-.modal__agreement {
-  font-size: 14px;
-  line-height: 1.71;
+.form__agreement {
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
 
   color: $current-text-color;
-}
-
-.modal__link {
-  color: $accent-color;
 }
