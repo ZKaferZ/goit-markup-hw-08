@@ -28,13 +28,6 @@
     color: $current-light-color;
   }
 
-  &:hover.logo--header,
-  &:focus.logo--header,
-  &:hover.logo--footer,
-  &:focus.logo--footer {
-    color: $accent-color;
-  }
-
   &--accent {
     color: $accent-color;
   }

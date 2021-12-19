@@ -10,11 +10,15 @@
   padding: 0;
   margin-bottom: 10px;
 
-  color: $current-light-color;
+  color: #757575;
 
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+  &:hover,
+  &:focus {
+    color: #ffffff;
+  }
   @media screen and(min-width: 1200px) {
     margin-bottom: 5px;
   }
@@ -27,7 +31,7 @@
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: $footer-link-color;
+  color: #757575;
 
   transition: color $duration $function;
 
@@ -37,7 +41,7 @@
 
   &:hover,
   &:focus {
-    color: $accent-color;
+    color: #ffffff
   }
 }
 
